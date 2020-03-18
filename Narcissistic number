@@ -1,3 +1,4 @@
+<?php
 function hitung($n)  
 {  
     if ($n == 0)  
