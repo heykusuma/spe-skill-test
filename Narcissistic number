@@ -1,0 +1,27 @@
+function hitung($n)  
+{  
+    if ($n == 0)  
+        return 0;  
+  
+    return (1 + hitung($n / 10));  
+}  
+   
+function cek( $n)  
+{  
+    $l = hitung($n);  
+    $dup = $n;  
+    $sum = 0;  
+    while ($dup)  
+    {  
+        $sum += pow($dup % 10, $l);  
+        $dup = (int)$dup / 10;  
+    }  
+  
+    return ($n == $sum);  
+}  
+$n = 153;  
+if (cek(!$n))  
+    echo "true";  
+else
+    echo "false";  
+?> 
